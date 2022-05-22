@@ -1,0 +1,106 @@
+
+
+
+
+
+<table border="2px">
+  <thead>
+  <tr>
+   <th> Name</th>
+   <th> Category</th>
+   <th>Description</th>
+   <th>Actions</th>
+  </tr>
+</thead>
+<tbody>
+
+  <tr *ngFor="let prouse of data1" width="3">
+    <td>{{prouse.namejson}}</td>
+    <td>{{prouse.category}}</td>
+    <td>{{prouse.description}}</td>
+   <td>
+    <button class="btn btn-danger" (click)="ondelete(prouse)">Delete</button>
+    <button class="btn btn-success" (click)="update(prouse)">Update</button>
+  </td>
+  </tr>
+  
+</tbody>
+  
+</table>
+
+
+
+
+
+
+
+
+
+<br><br>
+<div style="display:flex">
+<form #datCreate="ngForm"  >
+ 
+  <div>
+    <label>
+      Name
+    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text"   class="form-control" name="namejson"  placeholder="{{name}}"  [(ngModel)]="nametemplatecreate">
+  </div>
+<br>
+  <div>
+    <label>Category</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select  class="form-control"  name="category"  [(ngModel)]="categorytemplatecreate">
+        <option *ngFor="let item of arr" >
+            {{item}}
+        </option>
+    </select>
+  </div>
+<br>
+  <div>
+    <label>
+      Description
+    </label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" class="form-control"  name="description"  [(ngModel)]="descriptiontemplatecreate">
+  </div>
+<br>
+  <button class="btn btn-primary"  type="button" (click)="onsubmitCreate(datCreate)"  >Submit</button><br>
+  <br>
+ 
+</form>
+</div>
+<!--<router-outlet></router-outlet>-->
+
+
+<div style="display:flex">
+<form #datModify="ngForm"  >
+ <span>Update the data</span>
+  <div>
+    <label>
+      Name
+    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text"   class="form-control" name="namejson"  placeholder="{{name}}"  [(ngModel)]="nametemplatemodify">
+  </div>
+<br>
+  <div>
+    <label>Category</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select  class="form-control"  name="category"  [(ngModel)]="categorytemplatemodify">
+        <option *ngFor="let item of arr" >
+            {{item}}
+        </option>
+    </select>
+  </div>
+<br>
+  <div>
+    <label>
+      Description
+    </label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" class="form-control"  name="description"  [(ngModel)]="descriptiontemplatemodify">
+  </div>
+<br>
+  <button class="btn btn-primary"  type="button" (click)="onModify(datModify)"  >Update</button><br>
+  <br>
+ 
+ 
+  
+</form>
+</div>

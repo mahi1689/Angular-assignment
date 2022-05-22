@@ -1,0 +1,34 @@
+{
+  "details": [
+    {
+      "namejson": "suresh raina t",
+      "category": "veg",
+      "description": "description about veg",
+      "id": 2
+    },
+    {
+      "namejson": "virat kohli",
+      "category": "abd",
+      "description": "bnb",
+      "id": 7
+    },
+    {
+      "namejson": "jgjg",
+      "category": "chahal",
+      "description": "bnbjhj",
+      "id": 8
+    },
+    {
+      "namejson": "suresh raina",
+      "category": "abd",
+      "description": "description about veg",
+      "id": 9
+    },
+    {
+      "namejson": "mahi",
+      "category": "chahal",
+      "description": "fgfgfg",
+      "id": 10
+    }
+  ]
+}
